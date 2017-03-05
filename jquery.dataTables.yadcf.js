@@ -1261,6 +1261,10 @@
 						return true;
 					}
 					columnObj = getOptions(settingsDt.oInstance.selector)[col_num];
+					
+					if (typeof columnObj === "undefined") {
+						return true;
+					}
 
 					column_number_filter = calcColumnNumberFilter(settingsDt, col_num, table_selector_jq_friendly);
 					if (typeof columnObj.column_number_data === 'function' || typeof columnObj.column_number_render === 'function') {
