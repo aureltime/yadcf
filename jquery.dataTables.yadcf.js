@@ -1100,6 +1100,11 @@
 						return true;
 					}
 					columnObj = getOptions(settingsDt.oInstance.selector)[col_num];
+					
+					if (typeof columnObj === "undefined") {
+						return true;
+					}
+					
 					if (columnObj.filter_type === 'range_number_slider') {
 						min = $('#' + fromId).text();
 						max = $('#' + toId).text();
